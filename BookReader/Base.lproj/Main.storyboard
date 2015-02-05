@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="d05-VS-PiG">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qd6-ZH-2rk">
+                                <rect key="frame" x="137" y="127" width="46" height="30"/>
+                                <state key="normal" title="pdf">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="TdI-c2-KbW" kind="push" id="Tut-Ol-gnt"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Bm-py-gqP">
+                                <rect key="frame" x="137" y="196" width="46" height="30"/>
+                                <state key="normal" title="txt">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="Sn3-N9-k9U" kind="push" id="j6y-pd-ODH"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="id2-5v-QPz">
+                                <rect key="frame" x="137" y="264" width="46" height="30"/>
+                                <state key="normal" title="epub">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="WyH-lr-VSd" kind="push" id="GUP-mU-Qjd"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JrG-Ml-bEF">
+                                <rect key="frame" x="137" y="335" width="46" height="30"/>
+                                <state key="normal" title="Epub2">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="cDN-48-gEE" kind="push" identifier="showepub" id="Grb-RA-bCG"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="DC8-mM-skB"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="293" y="136"/>
+        </scene>
+        <!--Pub View Controller-->
+        <scene sceneID="xe9-Pw-fC4">
+            <objects>
+                <viewController id="cDN-48-gEE" customClass="EPubViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="94I-E7-r5R"/>
+                        <viewControllerLayoutGuide type="bottom" id="fWB-MX-sY5"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Z1L-DV-ytr">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GkP-Mh-5pS">
+                                <rect key="frame" x="0.0" y="524" width="320" height="44"/>
+                                <items>
+                                    <barButtonItem title="章节" id="bJF-Bq-h9O">
+                                        <connections>
+                                            <action selector="showChapterIndex:" destination="cDN-48-gEE" id="AMs-ks-f1W"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="Mug-8O-C4T"/>
+                                    <barButtonItem title="   a   " id="bBH-kX-CVN">
+                                        <connections>
+                                            <action selector="decreaseTextSizeClicked:" destination="cDN-48-gEE" id="tkO-3Y-opX"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="    A   " id="fg7-nG-RPW">
+                                        <connections>
+                                            <action selector="increaseTextSizeClicked:" destination="cDN-48-gEE" id="z6U-xM-rFP"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Nrb-V0-taG">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="524"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </webView>
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="9ee-4a-cMk">
+                                <rect key="frame" x="14" y="455" width="292" height="31"/>
+                                <connections>
+                                    <action selector="slidingEnded:" destination="cDN-48-gEE" eventType="valueChanged" id="m5Q-FZ-BP8"/>
+                                    <action selector="slidingStarted:" destination="cDN-48-gEE" eventType="valueChanged" id="Guh-IB-Sea"/>
+                                </connections>
+                            </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IQz-9T-kwg">
+                                <rect key="frame" x="111" y="499" width="99" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.090196078430000007" green="0.4549019608" blue="0.33725490200000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="CpE-ww-hi0"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="chapterListButton" destination="bJF-Bq-h9O" id="TAX-6v-05Y"/>
+                        <outlet property="currentPageLabel" destination="IQz-9T-kwg" id="AWf-XQ-iJu"/>
+                        <outlet property="decTextSizeButton" destination="bBH-kX-CVN" id="XgO-An-qZi"/>
+                        <outlet property="incTextSizeButton" destination="fg7-nG-RPW" id="j1g-Hd-G48"/>
+                        <outlet property="pageSlider" destination="9ee-4a-cMk" id="nu5-gX-u0S"/>
+                        <outlet property="toolbar" destination="GkP-Mh-5pS" id="xZe-0L-io2"/>
+                        <outlet property="webView" destination="Nrb-V0-taG" id="iJ2-Yg-4Ot"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Qhs-Oo-zpd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1171" y="645"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="EHg-Sn-lRt">
+            <objects>
+                <viewController id="TdI-c2-KbW" customClass="PDFViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="xzR-av-ZxX"/>
+                        <viewControllerLayoutGuide type="bottom" id="ERE-KB-iUE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="qUi-vA-G2A">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="oVK-FT-GTd"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IyT-gM-pWf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1017" y="432"/>
+        </scene>
+        <!--Text View Controller-->
+        <scene sceneID="fU7-NZ-Xmz">
+            <objects>
+                <viewController id="Sn3-N9-k9U" customClass="TextViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="1k4-WA-FOv"/>
+                        <viewControllerLayoutGuide type="bottom" id="Swm-Gl-vpY"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="k19-ip-c5Z">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9jS-yv-kYS">
+                                <rect key="frame" x="117" y="539" width="92" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.090196078430000007" green="0.4549019608" blue="0.33725490200000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yn1-zZ-FjN">
+                                <rect key="frame" x="16" y="48" width="294" height="490"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="kmd-1J-j7m"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="pageInfoLabel" destination="9jS-yv-kYS" id="aDd-NQ-YJx"/>
+                        <outlet property="textLabel" destination="yn1-zZ-FjN" id="haX-DS-4Ge"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RVZ-1Y-O6x" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1171" y="-22"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="ISk-4E-XxA">
+            <objects>
+                <viewController id="WyH-lr-VSd" customClass="KFViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ZKr-W5-2tB"/>
+                        <viewControllerLayoutGuide type="bottom" id="xJi-Hw-cSD"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="bjQ-WU-OiV">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oep-LN-vV0">
+                                <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="1X8-wU-wwb"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="webView" destination="oep-LN-vV0" id="Tzb-9R-uXW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qSa-kV-EmW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1017" y="-224"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="4yK-NZ-lrB">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="d05-VS-PiG" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Jqn-c5-SdO">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="YvN-lg-Ao7"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CIn-Hx-9Hq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-95" y="136"/>
+        </scene>
+    </scenes>
+</document>

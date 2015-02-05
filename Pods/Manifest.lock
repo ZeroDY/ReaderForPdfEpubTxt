@@ -1,0 +1,13 @@
+PODS:
+  - KissXML (5.0)
+  - SSZipArchive (0.3.2)
+
+DEPENDENCIES:
+  - KissXML
+  - SSZipArchive
+
+SPEC CHECKSUMS:
+  KissXML: e537c38b18ede903ee6de45953a9bd86c131ebe9
+  SSZipArchive: 11299a4e89821bd4085b12f25edaa85853e0051c
+
+COCOAPODS: 0.35.0
